@@ -139,12 +139,14 @@ def summary():
 
     with open(CSVFILE, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
-
+        
+        # isolate transactions for the selected month
         for line in reader:
             if monthnum == datetime.datetime.strptime(line['date'] , '%Y-%m-%d').month:
                 total += float(line['amount'])
                 monthtx.append({'categoryid': line['categoryid'], 'amount': line['amount']})
         
+        # sum transactions by category and post 
         for key, value in helpers.CategoryID.items():
             for row in monthtx:
                 if int(row['categoryid']) == int(key):
