@@ -114,8 +114,11 @@ def responses():
                     form_responses += f"<td>{helpers.CategoryID[int(value)]}</td>"
                 else:
                     form_responses += f"<td>{value}</td>"
-            form_responses += "<td>coming soon</td>"
-            form_responses += "</tr>"
+            # add edit and delete buttons and end the table row
+            form_responses += """
+                <td><button onclick="alert('Coming Soon!')" class="btn btn-secondary">Edit</button></td>
+                <td><button onclick="alert('Coming Soon!')" class="btn btn-secondary">Delete</button></td>
+                </tr>"""
 
     # post to table in responses.html
     return render_template('responses.html', form_responses=form_responses)
