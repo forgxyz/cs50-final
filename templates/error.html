@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}ERROR{% endblock %}
+
+{% block body %}
+
+    <!-- http://getbootstrap.com/docs/4.1/components/alerts/ -->
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Error</h4>
+        <p>{{ message }}</p>
+    </div>
+
+{% endblock %}

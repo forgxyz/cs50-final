@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}success!{% endblock %}
+
+{% block body %}
+
+    <!-- http://getbootstrap.com/docs/4.1/components/alerts/ -->
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Success</h4>
+        <p>{{ message }}</p>
+    </div>
+
+    <!-- turn this into a nice looking button -->
+    <div>
+        <a href="/">Submit Another</a> | <a href="/responses">View Responses</a>
+    </div>
+
+{% endblock %}

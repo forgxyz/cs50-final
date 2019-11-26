@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}summary table{% endblock %}
+
+{% block body %}
+    <table class="table table-dark">
+        <h3>Spending for {{ month }}</h3>
+        <thead class="table-primary">
+            <tr>
+                <th>Category</th>
+                <th>Amount Spent</th>
+                <th>Percent of Spending</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{ tabledata | safe }}
+        </tbody>
+    </table>
+    <br>
+    <div class="form-group">
+        <form>
+            <select action="/filter" class="form-control" name="month" required>
+                <option disabled selected>Change month...</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <button class="btn btn-primary" type="submit">Select</button>
+        </form>
+    </div>
+{% endblock %}
