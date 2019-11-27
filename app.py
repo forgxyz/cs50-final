@@ -34,7 +34,7 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # global variables
-CSVFILE = "responses/transactions.csv"
+CSVFILE = "responses/txTestData.csv"
 
 
 @app.route('/')
