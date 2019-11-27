@@ -3,7 +3,11 @@
 {% block title %}responses{% endblock%}
 
 {% block body %}
-    
+    <style>
+    table {
+        text-align: center
+    }
+    </style>
     <table id="response_table" class="table table-dark">
         <h3>All Recorded Expenses</h3>
         <thead class="table-primary">
@@ -13,8 +17,7 @@
                 <th>Category</th>
                 <th>Method</th>
                 <th>Notes</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th colspan="2">Modify</th>
             </tr>
         </thead>
 
