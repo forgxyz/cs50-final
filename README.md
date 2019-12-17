@@ -1,4 +1,4 @@
-# finance
+# CS50 Final Project
 finance / budgeting web app
 
 2019-11-30
@@ -15,3 +15,6 @@ This final project was not formally submitted to CS50 as I did not pay for the c
 
 Cleaned up the webapp files and uploaded a data file with fictionalized transaction data so I can make the repository public to demonstrate what the web app can do.
 I am choosing to leave the edit and delete buttons on the View All Responses page and may add functionality in the future.
+
+To run: clone repo and run flask server on local machine. This was not written to be run anywhere beyond your local computer.
+
