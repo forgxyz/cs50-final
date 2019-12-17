@@ -34,34 +34,12 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # global variables
-CSVFILE = "responses/txTestData.csv"
-
+CSVFILE = "data/sample_tx.csv"
 
 @app.route('/')
 def index():
     # return render_template("index.html")
-    return render_template('index.html')
-
-
-@app.route('/login')
-def login():
-    # if request.method == 'POST':
-    #     username = request.form.get('username')
-    #     password = request.form.get('password')
-    #     confirm = request.form.get('confirm')
-    #     if password != confirm:
-    #         mismatch = ""
-    #         return render_template('/login', error=mismatch)
-    #     return render_template('/')
-
-    return render_template("todo.html")
-
-
-@app.route('/logout')
-def logout():
-    session.clear()
-    # return redirect('/')
-    return render_template("todo.html")
+    return render_template('record.html')
 
 
 @app.route('/record', methods=['GET', 'POST'])
@@ -76,7 +54,7 @@ def record():
         # open, or create, a response log and write the user input
         with open(CSVFILE, 'a+', newline ='') as csvfile:
             fieldnames = ['amount', 'date', 'categoryid', 'method', 'comment']
-            writer = csv.DictWriter(csvfile, fieldnames, restval=' ')
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames, restval=' ')
 
             if not exists:
                 writer.writeheader()
@@ -111,7 +89,7 @@ def responses():
                 if key == 'amount':
                     form_responses += f"<td>{helpers.usd(value)}</td>"
                 elif key == 'categoryid':
-                    form_responses += f"<td>{helpers.CategoryID[int(value)]}</td>"
+                    form_responses += f"<td>{helpers.CategoryID[value]}</td>"
                 else:
                     form_responses += f"<td>{value}</td>"
             # add edit and delete buttons and end the table row
