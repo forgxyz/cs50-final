@@ -9,7 +9,7 @@ The full scale version will use a database instead of CSV files and will be buil
 
 I may come back and update this in the future to continue practice with Flask to compare the frameworks (notice the login was not implemented as I did not end up using a database to log the transactions).
 
-This final project was not formally submitted to CS50 as I did not pay for the certificate. 
+
 
 2019-12-17
 
@@ -18,3 +18,5 @@ I am choosing to leave the edit and delete buttons on the View All Responses pag
 
 To run: clone repo and run flask server on local machine. This was not written to be run anywhere beyond your local computer.
 
+
+Unfortunately I cannot fork the problem sets over to my repo, as they were uploaded directly to the CS50 account on submission.
