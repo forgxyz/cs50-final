@@ -19,4 +19,6 @@ I am choosing to leave the edit and delete buttons on the View All Responses pag
 To run: clone repo and run flask server on local machine. This was not written to be run anywhere beyond your local computer.
 
 
-Unfortunately I cannot fork the problem sets over to my repo, as they were uploaded directly to the CS50 account on submission.
+
+
+Unfortunately I cannot fork the problem sets over to my repo, as they were uploaded directly to the CS50 account on submission. So, only the final project lives on.
